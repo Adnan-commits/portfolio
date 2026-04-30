@@ -2,7 +2,7 @@
 
 A terminal-themed personal portfolio. No frameworks, no build step, no dependencies.
 
-> Live: _add your URL here once deployed_
+> Live: https://adnan-commits.github.io/portfolio/
 
 ## What this is
 
