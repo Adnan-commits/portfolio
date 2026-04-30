@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>adnan@portfolio:~$</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<script>
+  // Run before paint to prevent theme flash on reload.
+  (function() {
+    var t = 'dark';
+    try {
+      var saved = localStorage.getItem('adnan-portfolio-theme');
+      if (saved === 'light' || saved === 'dark') t = saved;
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) t = 'light';
+    } catch (e) {}
+    document.documentElement.classList.add(t);
+    // body class is set on DOMContentLoaded; doc element class drives initial paint via CSS.
+  })();
+</script>
+</head>
+<body>
+<canvas class="matrix-bg" id="matrix"></canvas>
+<button id="scroll-top" class="scroll-top" title="Scroll to top" aria-label="Scroll to top">
+  <span>TOP</span>
+</button>
+
+<div class="shell">
+  <div class="titlebar">
+    <div class="dots">
+      <div class="dot r"></div>
+      <div class="dot y"></div>
+      <div class="dot g"></div>
+    </div>
+    <div class="titlebar-text">adnan@portfolio: ~ - bash - 120x40</div>
+    <button id="theme-toggle" class="theme-toggle" title="Toggle theme (or type 'theme')" aria-label="Toggle theme">
+      <span id="theme-icon">☾</span>
+    </button>
+    <div class="titlebar-info" id="clock">--:--:--</div>
+  </div>
+
+  <div class="terminal" id="terminal">
+    <!-- Boot sequence renders here -->
+    <div id="boot"></div>
+
+    <!-- Output history -->
+    <div id="history"></div>
+
+    <!-- Active prompt -->
+    <div class="prompt-row" id="prompt-row" style="display:none;">
+      <span class="prompt">
+        <span class="user">adnan</span><span class="at">@</span><span class="host">portfolio</span><span class="sep">:</span><span class="path">~</span><span class="sep">$</span>
+      </span>
+      <div class="input-area">
+        <input type="text" id="cmd-input" autocomplete="off" autofocus />
+        <span class="cursor" id="cursor"></span>
+      </div>
+    </div>
+
+    <div class="status">
+      <span class="live">SYSTEM ONLINE</span>
+      <span>BUILD: 2026.05 stable</span>
+      <span>UPTIME: <span id="uptime">0s</span></span>
+      <span>MUMBAI / IST</span>
+    </div>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
