@@ -17,6 +17,8 @@
     --white: #e5e7eb;
     --scanline: rgba(0,0,0,0.15);
     --vignette: rgba(0,0,0,0.4);
+    --proj-bg: rgba(0,0,0,0.3);
+    --proj-head-tint: rgba(74,222,128,0.1);
     --matrix-color: #4ade80;
     --matrix-color-bright: #c6f6d5;
     --matrix-fade: rgba(5, 8, 5, 0.08);
@@ -29,8 +31,8 @@
     --bg: #fdf6e3;
     --bg-deep: #f5edd6;
     --term-bg: #fefbf2;
-    --term-bg-translucent: rgba(254, 251, 242, 0.94);
-    --titlebar-bg-translucent: rgba(245, 237, 214, 0.96);
+    --term-bg-translucent: rgba(254, 251, 242, 0.88);
+    --titlebar-bg-translucent: rgba(245, 237, 214, 0.92);
     --term-border: #d8d2bd;
     --green: #2d7a3e;
     --green-dim: #859900;
@@ -44,9 +46,11 @@
     --white: #073642;
     --scanline: rgba(101, 123, 131, 0.04);
     --vignette: rgba(101, 123, 131, 0.08);
+    --proj-bg: rgba(101, 123, 131, 0.06);
+    --proj-head-tint: rgba(45, 122, 62, 0.08);
     --matrix-color: #859900;
     --matrix-color-bright: #b58900;
-    --matrix-fade: rgba(253, 246, 227, 0.12);
+    --matrix-fade: rgba(253, 246, 227, 0.10);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -401,10 +405,10 @@
   .proj-block {
     border: 1px solid var(--term-border);
     margin: 8px 0;
-    background: rgba(0,0,0,0.3);
+    background: var(--proj-bg);
   }
   .proj-head {
-    background: linear-gradient(90deg, rgba(74,222,128,0.1), transparent);
+    background: linear-gradient(90deg, var(--proj-head-tint), transparent);
     padding: 8px 14px;
     border-bottom: 1px dotted var(--term-border);
     display: flex;

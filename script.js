@@ -25,19 +25,15 @@ const ASCII_LOGO =
 
 // ============ BOOT SEQUENCE ============
 const bootLines = [
-  { t: '<span class="dim">[    0.0000]</span> <span class="ok">OK</span>  Reached target Boot.', d: 80 },
-  { t: '<span class="dim">[    0.0421]</span> <span class="ok">OK</span>  Mounted /portfolio/adnan_bardgujar', d: 60 },
-  { t: '<span class="dim">[    0.1108]</span> <span class="ok">OK</span>  Started Resume Daemon (resumed.service)', d: 60 },
-  { t: '<span class="dim">[    0.2241]</span> <span class="ok">OK</span>  Loaded modules: <span class="info">llm.ko mcp.ko eval.ko</span>', d: 80 },
-  { t: '<span class="dim">[    0.3019]</span> <span class="ok">OK</span>  Verified credentials: <span class="ag">Anthropic MCP / GCP / OCI</span>', d: 90 },
-  { t: '<span class="dim">[    0.4502]</span> <span class="ok">OK</span>  Established uplink: linkedin.com / github.com', d: 60 },
-  { t: '<span class="dim">[    0.5337]</span> <span class="warn">..</span>  Initializing portfolio shell...', d: 120 },
+  { t: '<span class="dim">[    0.0421]</span> <span class="ok">OK</span>  Mounted /portfolio/adnan_bardgujar', d: 80 },
+  { t: '<span class="dim">[    0.2241]</span> <span class="ok">OK</span>  Loaded modules: <span class="info">llm.ko mcp.ko eval.ko</span>', d: 100 },
+  { t: '<span class="dim">[    0.3019]</span> <span class="ok">OK</span>  Verified credentials: <span class="ag">Anthropic MCP / GCP / OCI</span>', d: 100 },
+  { t: '<span class="dim">[    0.5337]</span> <span class="warn">..</span>  Initializing portfolio shell...', d: 140 },
   { t: '', d: 30 },
   { t: '<span class="ag">Welcome to AdnanOS 26.04 (GNU/Engineering)</span>', d: 40 },
   { t: '<span class="dim">Last login: ' + new Date().toUTCString() + ' from recruiter.tty1</span>', d: 30 },
   { t: '', d: 30 },
 ];
-
 // ============ COMMANDS ============
 const COMMANDS = {};
 
