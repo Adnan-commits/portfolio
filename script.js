@@ -3,7 +3,7 @@ const PROFILE = {
   name: "Adnan Bardgujar",
   role: "AI Systems Engineer",
   edu: "BE Computer Engineering, MHSSCE Mumbai",
-  cgpa: "8.30 / 10",
+  cgpa: "~8.72 / 10",
   grad: "May 2026",
   email: "adnanbardgujar@gmail.com",
   phone: "+91-9321750759",
@@ -111,7 +111,7 @@ AI Systems Engineer specialising in LLM integration, MCP server architecture, an
 
 <span class="ag">═══ EDUCATION ═══</span><br/>
 <span class="bright">M.H. Saboo Siddik College of Engineering</span> | Mumbai<br/>
-BE Computer Engineering | CGPA: <span class="amber">8.30</span> | Graduating <span class="amber">May 2026</span><br/><br/>
+BE Computer Engineering | CGPA: <span class="amber">~8.72</span> | Graduating <span class="amber">May 2026</span><br/><br/>
 
 <span class="ag">═══ CERTIFICATIONS ═══</span><br/>
 <span class="info">▸</span> Anthropic // Intro to MCP: Architecture, Tool Integration, Controlled AI Deployment<br/>
