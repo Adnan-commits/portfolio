@@ -6,7 +6,7 @@ const PROFILE = {
   cgpa: "8.72 / 10",
   grad: "May 2026",
   email: "adnanbardgujar@gmail.com",
-  phone: "+91-9321750759",
+  // phone number is avoided for privacy reasons, but can be shared upon request or found on LinkedIn
   location: "Mumbai, India",
   linkedin: "https://www.linkedin.com/in/adnan-bardgujar-b43b7a25b/",
   github: "https://github.com/Adnan-commits",
@@ -98,7 +98,7 @@ COMMANDS["hire-me"] = () => `
     <li>Available from May 2026</li>
   </ul>
   <br/>
-  <p>📞 <a href="tel:+919321750759">+91-9321750759</a> &nbsp; ✉ <a href="mailto:${PROFILE.email}">${PROFILE.email}</a></p>
+  <p>✉ <a href="mailto:${PROFILE.email}">${PROFILE.email}</a> &nbsp; 🔗 <a href="${PROFILE.linkedin}" target="_blank">LinkedIn</a></p>
 </div>`;
 
 COMMANDS["cat resume.txt"] = () => `
@@ -257,7 +257,6 @@ COMMANDS.contact = () => `
   <h3>// ESTABLISH UPLINK</h3>
   <table>
     <tr><td class="label">email</td><td><a href="mailto:${PROFILE.email}">${PROFILE.email}</a></td></tr>
-    <tr><td class="label">phone</td><td><a href="tel:+919321750759">${PROFILE.phone}</a></td></tr>
     <tr><td class="label">linkedin</td><td><a href="${PROFILE.linkedin}" target="_blank">linkedin.com/in/adnan-bardgujar</a></td></tr>
     <tr><td class="label">github</td><td><a href="${PROFILE.github}" target="_blank">github.com/Adnan-commits</a></td></tr>
     <tr><td class="label">google dev</td><td><a href="${PROFILE.google}" target="_blank">g.dev/nan11</a></td></tr>
