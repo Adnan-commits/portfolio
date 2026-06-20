@@ -45,6 +45,7 @@ COMMANDS.help = () => `
     <tr><td class="label"><span class="cmd-link with-arrow" data-cmd="whoami">whoami</span></td><td>Quick intro // who is Adnan</td></tr>
     <tr><td class="label"><span class="cmd-link with-arrow" data-cmd="cat resume.txt">cat resume.txt</span></td><td>Full resume summary</td></tr>
     <tr><td class="label"><span class="cmd-link with-arrow" data-cmd="ls projects/">ls projects/</span></td><td>List featured projects</td></tr>
+    <tr><td class="label"><span class="cmd-link with-arrow" data-cmd="./typepwd.sh">./typepwd.sh</span></td><td>Open Terminal Basics project details</td></tr>
     <tr><td class="label"><span class="cmd-link with-arrow" data-cmd="./minerva.sh">./minerva.sh</span></td><td>Open Minerva project details</td></tr>
     <tr><td class="label"><span class="cmd-link with-arrow" data-cmd="./phishguard.sh">./phishguard.sh</span></td><td>Open PhishGuard project details</td></tr>
     <tr><td class="label"><span class="cmd-link with-arrow" data-cmd="./forestfire.sh">./forestfire.sh</span></td><td>Open Forest Fire project details</td></tr>
@@ -65,15 +66,15 @@ COMMANDS.whoami = () => `
   <p><span class="ag">${PROFILE.name}</span></p>
   <p class="dim">${PROFILE.role}</p>
   <br/>
-  <p>I build and stress-test AI systems end-to-end. From MCP server design to structured capability evaluations, my focus is on making LLM-powered tools production-ready, not just demo-ready.</p>
+  <p>I build and stress-test AI systems end-to-end. Architecture comes first: how the pieces fit, where the boundaries go, how a system behaves under load and at the edges. An LLM one person uses has to be useful. An LLM a team relies on has to be inspectable. I design for that from the start.</p>
   <br/>
-  <p>I don't just build AI systems. I break them first, find the failure modes, and document what production actually needs.</p>
+  <p>I break systems before users do. Find the failure in testing, not production. Diagnose it and ship the fix.</p>
   <br/>
   <table>
     <tr><td class="label">role</td><td>${PROFILE.role}</td></tr>
     <tr><td class="label">edu</td><td>${PROFILE.edu}</td></tr>
     <tr><td class="label">cgpa</td><td>${PROFILE.cgpa}</td></tr>
-    <tr><td class="label">graduating</td><td>${PROFILE.grad}</td></tr>
+    <tr><td class="label">graduated</td><td>${PROFILE.grad}</td></tr>
     <tr><td class="label">location</td><td>${PROFILE.location}</td></tr>
   </table>
 </div>`;
@@ -83,20 +84,22 @@ COMMANDS["hire-me"] = () => `
   <h3>// FOR RECRUITERS &amp; HIRING TEAMS</h3>
   <p class="dim">Plain English version. No buzzwords.</p>
   <br/>
-  <p><span class="ag">What I do:</span> I build AI systems that use Large Language Models like Claude and LLaMA. I focus on making them safe, reliable, and ready for real production use, not just cool demos.</p>
+  <p><span class="ag">What I do:</span> I build AI systems that companies can actually rely on. Not just demos that impress in a meeting, but systems where you can trace why the AI gave a specific answer, catch problems before users hit them, and trust the output enough to put a team on it.</p>
   <br/>
-  <p><span class="ag">My internship:</span> Spent 10 months at Aiolos Cloud Solutions building and testing AI tools, writing risk reports, and improving system reliability across 5 testing cycles.</p>
+  <p><span class="ag">My internship:</span> Spent 10 months at Aiolos Cloud Solutions as the person making sure AI tools actually worked before they shipped. Built and stress-tested 5 tools, identified how they could fail, and drove fixes through to closure across 5 testing cycles.</p>
   <br/>
-  <p><span class="ag">My biggest project:</span> Minerva, a research engine that cuts manual research time by 60%, reaching 82% accuracy across multiple topics.</p>
+  <p><span class="ag">My flagship AI project:</span> Minerva, a research engine that cuts manual research time by 60%, reaching 82% accuracy across multiple topics. Built the evaluation framework that decided whether it was safe to deploy.</p>
   <br/>
   <p><span class="ag">Why hire me:</span></p>
   <ul>
+    <li>Track record of finding and fixing AI failure modes before they reach users</li>
     <li>Anthropic MCP Certified (rare credential, official MCP architecture training)</li>
     <li>Selected for McKinsey Forward Program 2026</li>
     <li>Cloud certified on both GCP and Oracle Cloud Infrastructure</li>
-    <li>Track record of finding and fixing AI failure modes before deployment</li>
-    <li>Available from May 2026</li>
+    <li>Available to join within a week</li>
   </ul>
+  <br/>
+  <p><span class="ag">Looking for:</span> AI Engineer, ML Engineer, or LLM/AI Systems roles. Open to remote and on-site.</p>
   <br/>
   <p>✉ <a href="mailto:${PROFILE.email}">${PROFILE.email}</a> &nbsp; 🔗 <a href="${PROFILE.linkedin}" target="_blank">LinkedIn</a></p>
 </div>`;
@@ -107,11 +110,11 @@ COMMANDS["cat resume.txt"] = () => `
 <span class="dim">// 2.1 KB, last modified: 2026-04-30</span><br/><br/>
 
 <span class="ag">═══ SUMMARY ═══</span><br/>
-AI Systems Engineer specialising in LLM integration, MCP server architecture, and production AI evaluation. Engineered and stress-tested 5 MCP tools, authored 5+ technical risk reports, and architected full-stack AI systems achieving 82%+ accuracy across multi-domain queries.<br/><br/>
+AI Systems Engineer specialising in LLM integration, MCP server architecture, and production AI evaluation. Engineered and stress-tested 5 MCP tools, identified and resolved failure modes across 5+ production risk cycles, and architected full-stack AI systems achieving 82%+ accuracy across multi-domain queries.<br/><br/>
 
 <span class="ag">═══ EDUCATION ═══</span><br/>
 <span class="bright">M.H. Saboo Siddik College of Engineering</span> | Mumbai<br/>
-BE Computer Engineering | CGPA: <span class="amber">8.72</span> | Graduating <span class="amber">May 2026</span><br/><br/>
+BE Computer Engineering | CGPA: <span class="amber">8.72</span> | Graduated <span class="amber">May 2026</span><br/><br/>
 
 <span class="ag">═══ CERTIFICATIONS ═══</span><br/>
 <span class="info">▸</span> Anthropic // Intro to MCP: Architecture, Tool Integration, Controlled AI Deployment<br/>
@@ -130,15 +133,15 @@ COMMANDS["cat experience.log"] = () => `
   <p class="meta">AI Systems Intern  ·  Jul 2025 – Apr 2026  ·  Mumbai, India</p>
   <ul>
     <li>Scoped, built, and stress-tested <span class="ag">5 MCP tools</span> across web and PDF modes over 5 iterative cycles, surfacing failure modes and driving mitigations to closure under a Senior Solutions Architect.</li>
-    <li>Authored <span class="ag">5+ technical risk reports</span> on live system behaviour, translating findings into actionable mitigations for a cross-functional team and accelerating MVP progress toward production readiness.</li>
-    <li>Engineered secure MCP server architecture and access controls across 5 tool integrations, enforcing defined safety and performance boundaries within a 4-member team.</li>
-    <li>Optimised AI pipeline reliability by iterating on tool integration architecture, reducing identified failure points across 5 test cycles and contributing directly to a production-ready system.</li>
+    <li>Ran <span class="ag">5+ technical risk assessments</span> on live system behaviour, surfaced failure modes, and drove mitigations to closure for a cross-functional team, accelerating MVP progress toward production readiness.</li>
+    <li>Engineered secure MCP server architecture and access controls across 5 tool integrations, then iterated across 5 test cycles to reduce failure points and harden the system for production.</li>
   </ul>
 </div>`;
 
 COMMANDS["ls projects/"] = () => `
 <div class="output">
-<span class="dim">total 3</span><br/>
+<span class="dim">total 4</span><br/>
+<span class="ok">drwxr-xr-x</span> adnan adnan  <span class="amber cmd-link" data-cmd="./typepwd.sh">typepwd/</span>      <span class="dim">// Interactive Linux course, simulated shell, single HTML file</span><br/>
 <span class="ok">drwxr-xr-x</span> adnan adnan  <span class="amber cmd-link" data-cmd="./minerva.sh">minerva/</span>      <span class="dim">// AI research engine, MCP, LLaMA 3.3 70B</span><br/>
 <span class="ok">drwxr-xr-x</span> adnan adnan  <span class="amber cmd-link" data-cmd="./phishguard.sh">phishguard/</span>   <span class="dim">// Hybrid phishing detection, 99.2% email accuracy</span><br/>
 <span class="ok">drwxr-xr-x</span> adnan adnan  <span class="amber cmd-link" data-cmd="./forestfire.sh">forestfire/</span>   <span class="dim">// Fire risk prediction, 87% accuracy</span><br/><br/>
@@ -156,7 +159,7 @@ COMMANDS["./minerva.sh"] = () => `
     <br/>
     <p>Engineered an evaluation framework with pass/fail thresholds and adversarial testing, achieving <span class="ag">82% accuracy</span> across multi-domain queries and surfacing critical reasoning failures before production.</p>
     <br/>
-    <p>Delivered evaluation reports mapping capability boundaries and residual risks, directly driving go/no-go deployment decisions.</p>
+    <p>Mapped capability boundaries and residual risks, directly driving go/no-go deployment decisions.</p>
     <br/>
     <span class="stat">↓ 60% research time</span>
     <span class="stat">↑ 82% multi-domain accuracy</span>
@@ -205,6 +208,28 @@ COMMANDS["./forestfire.sh"] = () => `
   </div>
 </div>`;
 
+COMMANDS["./typepwd.sh"] = () => `
+<div class="proj-block">
+  <div class="proj-head">
+    <span class="proj-name">▶ TERMINAL BASICS // INTERACTIVE LINUX COURSE</span>
+    <span class="proj-stack">HTML · Tailwind CSS · Vanilla JavaScript</span>
+  </div>
+  <div class="proj-body">
+    <p>Built an interactive course teaching <span class="ag">15 essential Linux commands</span> in a fully simulated terminal with a persistent in-browser filesystem. Single HTML file, no build step, no server, no dependencies.</p>
+    <br/>
+    <p>Engineered a realistic shell from scratch: command history, tab completion, a working pager for less, regex matching for grep, octal and symbolic modes for chmod, and runaway processes to hunt down with ps and kill.</p>
+    <br/>
+    <p>Designed for progressive mastery: lessons unlock sequentially, each gated by a hands-on challenge. A cheatsheet drawer fills in as you learn. Fully keyboard accessible, respects prefers-reduced-motion.</p>
+    <br/>
+    <span class="stat">15 commands</span>
+    <span class="stat">Single HTML file</span>
+    <span class="stat">Persistent filesystem</span>
+    <span class="stat">Fully accessible</span>
+    <br/><br/>
+    <p>🔗 <a href="https://type-pwd.vercel.app/" target="_blank">type-pwd.vercel.app</a> · <a href="https://github.com/Adnan-commits/type-pwd" target="_blank">github.com/Adnan-commits/type-pwd</a></p>
+  </div>
+</div>`;
+
 COMMANDS["stack --skills"] = () => {
   const skills = [
     { name: "LLM Integration (Claude, LLaMA 3.3 70B)", val: 92 },
@@ -243,7 +268,7 @@ COMMANDS["certs --list"] = () => `
     <tr><td class="label">Google Cloud</td><td>Skills Boost — Gold League</td><td>—</td></tr>
   </table>
   <br/>
-  <h3>// LEADERSHIP</h3>
+  <h3>// LEADERSHIP &amp; RECOGNITION</h3>
   <ul>
     <li><span class="ag">Top 30</span> // Unthink Ideathon (EDC × Programmers Club). Pitched Minerva.</li>
     <li><span class="ag">2nd Place</span> // Pitch Your Idea, IEEE Cell.</li>
@@ -263,7 +288,7 @@ COMMANDS.contact = () => `
     <tr><td class="label">location</td><td>${PROFILE.location}</td></tr>
   </table>
   <br/>
-  <p class="dim">Available for full-time roles starting May 2026. Open to remote and on-site.</p>
+  <p class="dim">Available to join within a week. Open to remote and on-site.</p>
 </div>`;
 
 COMMANDS.clear = () => "__CLEAR__";
@@ -302,6 +327,7 @@ const ALIASES = {
   "skills": "stack --skills",
   "certs": "certs --list",
   "minerva": "./minerva.sh",
+  "typepwd": "./typepwd.sh",
   "phishguard": "./phishguard.sh",
   "forestfire": "./forestfire.sh",
   "hr": "hire-me",
@@ -315,6 +341,7 @@ const MENU_CHIPS = [
   { label: "hire-me", cmd: "hire-me", key: "2" },
   { label: "cat resume.txt", cmd: "cat resume.txt", key: "3" },
   { label: "ls projects/", cmd: "ls projects/", key: "4" },
+  { label: "./typepwd.sh", cmd: "./typepwd.sh" },
   { label: "./minerva.sh", cmd: "./minerva.sh" },
   { label: "./phishguard.sh", cmd: "./phishguard.sh" },
   { label: "./forestfire.sh", cmd: "./forestfire.sh" },
@@ -419,6 +446,7 @@ function runCommand(raw, fromClick = false) {
     historyEl.appendChild(buildIntro());
     bindMenu();
     cmdInput.value = '';
+    cmdInput.style.width = '1ch';
     scrollToBottom();
     return;
   }
@@ -429,6 +457,7 @@ function runCommand(raw, fromClick = false) {
 
   animateBars();
   cmdInput.value = '';
+  cmdInput.style.width = '1ch';
   scrollToBottom();
   cmdInput.focus({ preventScroll: true });
 }
@@ -483,22 +512,30 @@ cmdInput.addEventListener('keydown', (e) => {
     if (cmdHistory.length === 0) return;
     historyIdx = Math.min(historyIdx + 1, cmdHistory.length - 1);
     cmdInput.value = cmdHistory[historyIdx] || '';
+    resizeInput();
   } else if (e.key === 'ArrowDown') {
     e.preventDefault();
     historyIdx = Math.max(historyIdx - 1, -1);
     cmdInput.value = historyIdx === -1 ? '' : cmdHistory[historyIdx];
+    resizeInput();
   } else if (e.key === 'Tab') {
     e.preventDefault();
     // Simple autocomplete
     const v = cmdInput.value.toLowerCase();
     const all = [...Object.keys(COMMANDS), ...Object.keys(ALIASES)];
     const match = all.find(k => k.startsWith(v));
-    if (match) cmdInput.value = match;
+    if (match) { cmdInput.value = match; resizeInput(); }
   } else if (e.ctrlKey && e.key === 'l') {
     e.preventDefault();
     runCommand('clear');
   }
 });
+
+// Resize input to content so the fake cursor follows the text.
+function resizeInput() {
+  cmdInput.style.width = (cmdInput.value.length + 1) + 'ch';
+}
+cmdInput.addEventListener('input', resizeInput);
 
 // Keep input focused when clicking anywhere on terminal,
 // except on links, buttons, or anything that triggers a command.
