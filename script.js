@@ -3,7 +3,7 @@ const PROFILE = {
   name: "Adnan Bardgujar",
   role: "AI Systems Engineer",
   edu: "BE Computer Engineering, MHSSCE Mumbai",
-  cgpa: "8.72 / 10",
+  cgpa: "8.86 / 10",
   grad: "May 2026",
   email: "adnanbardgujar@gmail.com",
   // phone number is avoided for privacy reasons, but can be shared upon request or found on LinkedIn
@@ -46,6 +46,7 @@ COMMANDS.help = () => `
     <tr><td class="label"><span class="cmd-link with-arrow" data-cmd="cat resume.txt">cat resume.txt</span></td><td>Full resume summary</td></tr>
     <tr><td class="label"><span class="cmd-link with-arrow" data-cmd="ls projects/">ls projects/</span></td><td>List featured projects</td></tr>
     <tr><td class="label"><span class="cmd-link with-arrow" data-cmd="./typepwd.sh">./typepwd.sh</span></td><td>Open Terminal Basics project details</td></tr>
+    <tr><td class="label"><span class="cmd-link with-arrow" data-cmd="./solorrery.sh">./solorrery.sh</span></td><td>Open Sol Orrery project details</td></tr>
     <tr><td class="label"><span class="cmd-link with-arrow" data-cmd="./minerva.sh">./minerva.sh</span></td><td>Open Minerva project details</td></tr>
     <tr><td class="label"><span class="cmd-link with-arrow" data-cmd="./phishguard.sh">./phishguard.sh</span></td><td>Open PhishGuard project details</td></tr>
     <tr><td class="label"><span class="cmd-link with-arrow" data-cmd="./forestfire.sh">./forestfire.sh</span></td><td>Open Forest Fire project details</td></tr>
@@ -114,7 +115,7 @@ AI Systems Engineer specialising in LLM integration, MCP server architecture, an
 
 <span class="ag">═══ EDUCATION ═══</span><br/>
 <span class="bright">M.H. Saboo Siddik College of Engineering</span> | Mumbai<br/>
-BE Computer Engineering | CGPA: <span class="amber">8.72</span> | Graduated <span class="amber">May 2026</span><br/><br/>
+BE Computer Engineering | CGPA: <span class="amber">8.86</span> | Graduated <span class="amber">May 2026</span><br/><br/>
 
 <span class="ag">═══ CERTIFICATIONS ═══</span><br/>
 <span class="info">▸</span> Anthropic // Intro to MCP: Architecture, Tool Integration, Controlled AI Deployment<br/>
@@ -140,8 +141,9 @@ COMMANDS["cat experience.log"] = () => `
 
 COMMANDS["ls projects/"] = () => `
 <div class="output">
-<span class="dim">total 4</span><br/>
+<span class="dim">total 5</span><br/>
 <span class="ok">drwxr-xr-x</span> adnan adnan  <span class="amber cmd-link" data-cmd="./typepwd.sh">typepwd/</span>      <span class="dim">// Interactive Linux course, simulated shell, single HTML file</span><br/>
+<span class="ok">drwxr-xr-x</span> adnan adnan  <span class="amber cmd-link" data-cmd="./solorrery.sh">solorrery/</span>    <span class="dim">// 3D solar system, Three.js, 730 lines, NASA data</span><br/>
 <span class="ok">drwxr-xr-x</span> adnan adnan  <span class="amber cmd-link" data-cmd="./minerva.sh">minerva/</span>      <span class="dim">// AI research engine, MCP, LLaMA 3.3 70B</span><br/>
 <span class="ok">drwxr-xr-x</span> adnan adnan  <span class="amber cmd-link" data-cmd="./phishguard.sh">phishguard/</span>   <span class="dim">// Hybrid phishing detection, 99.2% email accuracy</span><br/>
 <span class="ok">drwxr-xr-x</span> adnan adnan  <span class="amber cmd-link" data-cmd="./forestfire.sh">forestfire/</span>   <span class="dim">// Fire risk prediction, 87% accuracy</span><br/><br/>
@@ -227,6 +229,28 @@ COMMANDS["./typepwd.sh"] = () => `
     <span class="stat">Fully accessible</span>
     <br/><br/>
     <p>🔗 <a href="https://type-pwd.vercel.app/" target="_blank">type-pwd.vercel.app</a> · <a href="https://github.com/Adnan-commits/type-pwd" target="_blank">github.com/Adnan-commits/type-pwd</a></p>
+  </div>
+</div>`;
+
+COMMANDS["./solorrery.sh"] = () => `
+<div class="proj-block">
+  <div class="proj-head">
+    <span class="proj-name">▶ SOL ORRERY // 3D INTERACTIVE SOLAR SYSTEM</span>
+    <span class="proj-stack">HTML5 · WebGL · Three.js r128 · Single-file build</span>
+  </div>
+  <div class="proj-body">
+    <p>Built a <span class="ag">3D interactive solar system</span> in a single 730-line HTML file under 2.6 MB. All eight planets, Pluto, ten moons, 4,200 asteroid belt points, 3,000 Kuiper belt points, and both Voyager probes at their real positions over 100 AU from the Sun. Every figure traces back to NASA NSSDCA.</p>
+    <br/>
+    <p>Six-axis free flight with velocity-based momentum, orbit-lock camera, cinematic transitions, number-key jumps, and an auto-tour across twelve celestial bodies with live telemetry. Custom GLSL shaders for planetary atmospheres. Time slider compresses Earth's full orbit into one second.</p>
+    <br/>
+    <p>Dozens of iterative audit cycles underneath: double texture decodes caught and killed, input bugs diagnosed down to OS repeat-delay mismatches, shader opacity calls that silently did nothing, retrograde rotation double-encoding reconciled. Production-grade engineering on a project nobody required it for.</p>
+    <br/>
+    <span class="stat">2.6 MB single file</span>
+    <span class="stat">730 lines</span>
+    <span class="stat">NASA NSSDCA data</span>
+    <span class="stat">12-body auto-tour</span>
+    <br/><br/>
+    <p>🔗 <a href="https://sol-orrery.vercel.app/" target="_blank">sol-orrery.vercel.app</a></p>
   </div>
 </div>`;
 
@@ -328,6 +352,7 @@ const ALIASES = {
   "certs": "certs --list",
   "minerva": "./minerva.sh",
   "typepwd": "./typepwd.sh",
+  "solorrery": "./solorrery.sh",
   "phishguard": "./phishguard.sh",
   "forestfire": "./forestfire.sh",
   "hr": "hire-me",
@@ -342,6 +367,7 @@ const MENU_CHIPS = [
   { label: "cat resume.txt", cmd: "cat resume.txt", key: "3" },
   { label: "ls projects/", cmd: "ls projects/", key: "4" },
   { label: "./typepwd.sh", cmd: "./typepwd.sh" },
+  { label: "./solorrery.sh", cmd: "./solorrery.sh" },
   { label: "./minerva.sh", cmd: "./minerva.sh" },
   { label: "./phishguard.sh", cmd: "./phishguard.sh" },
   { label: "./forestfire.sh", cmd: "./forestfire.sh" },
